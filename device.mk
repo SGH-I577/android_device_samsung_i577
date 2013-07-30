@@ -17,10 +17,6 @@
 ## (2) Also get non-open-source specific aspects if available
 $(call inherit-product-if-exists, vendor/samsung/i577/i577-vendor.mk)
 
-## misc
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dexopt-flags=m=v,o=y
-
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/i577/overlay
 
@@ -34,6 +30,3 @@ PRODUCT_COPY_FILES += \
 
 # Inherit from celox-common
 $(call inherit-product, device/samsung/celox-common/celox-common.mk) 
-
-# NFC
-BOARD_HAVE_NFC := true
