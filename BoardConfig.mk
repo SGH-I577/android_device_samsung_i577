@@ -31,8 +31,9 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/samsung/i577/BoardConfigVendor.mk
 
-TARGET_BOOTLOADER_BOARD_NAME := i577
+TARGET_BOOTLOADER_BOARD_NAME := MSM8660_SURF
 
+# Assert
 TARGET_OTA_ASSERT_DEVICE := SGH-I577,i577,I577,Exhilarate,exhilarate
 
 # Kernel
@@ -55,15 +56,3 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 1218445312
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/i577/bluetooth 
-BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
-BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk0p28
-BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
-BOARD_USES_MMCUTILS := true
-BOARD_HAS_NO_MISC_PARTITION := true
-
-# Workaround for glitches while cropping bypass layers
-TARGET_NO_BYPASS_CROPPING := true
-
-# MTP
-BOARD_MTP_DEVICE := "/dev/mtp_usb"
-
